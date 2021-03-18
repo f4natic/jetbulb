@@ -1,7 +1,7 @@
 package test_task;
 
 public class InvalidValueException extends RuntimeException {
-    public InvalidValueException() {
-        super("String must contain only valid roman numerals [I, V, X, L, C, D, M].");
+    public InvalidValueException(String message) {
+        super(message);
     }
 }

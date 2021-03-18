@@ -4,12 +4,13 @@ import java.util.List;
 /*
     https://www.baeldung.com/java-convert-roman-arabic
  */
-public class NotationConverter {
+public class V1__NotationConverter {
     public int toArabic(String romanNotation) throws InvalidValueException {
+        String errorMessage = "String must contain only valid roman numerals [I, V, X, L, C, D, M]";
 //        Не получилось без внесения 4 9 40 90 400 900 в enum
 
         if (romanNotation.length() < 0 || romanNotation == null) {
-            throw new InvalidValueException();
+            throw new InvalidValueException(errorMessage);
         }
         romanNotation = romanNotation.toUpperCase();
         int result = 0;
